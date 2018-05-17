@@ -10,7 +10,7 @@
 - 创建虚拟环境
 `virtualenv myvenv`
 -(会在当前目录下生成myvenv的文件夹)
-
+************
 - 激活虚拟环境
   1.`cd myvenv\Scripts`
   2.`activate`
@@ -38,3 +38,11 @@
 
 3.`python manage.py db upgrade`(更新数据库)
 - 至此数据库已生成所需表结构
+
+- 如变更表结构需要删除数据表与版本控制表再执行2，3的动作
+
+#### 编辑.gitignore文件可忽略提交到github上的文件
+
+#### 浏览器测试api的get方法
+
+- eg：http://127.0.0.1:5000/query?user_phone=123&pwd=12
