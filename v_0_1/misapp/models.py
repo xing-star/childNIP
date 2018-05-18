@@ -5,12 +5,12 @@ from .. import db
 class User(db.Model):
     __tablename__ = 'user_db'
 
-    id = db.Column('user_id',db.Integer,primary_key=True,autoincrement=True)
-    password=db.Column('user_password',db.String(20))
-    phone=db.Column('user_phone',db.String(20))
-    name=db.Column('user_name',db.String(20))
-    card=db.Column('user_card',db.String(20))
-    role=db.Column('user_role',db.Integer())
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
+    password=db.Column(db.String(20))
+    phone=db.Column(db.String(20))
+    name=db.Column(db.String(20))
+    card=db.Column(db.String(20))
+    role=db.Column(db.Integer)
 
     def __init__(self, id, password,phone,name,card,role):
         self.id = id

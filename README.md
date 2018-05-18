@@ -40,9 +40,29 @@
 - 至此数据库已生成所需表结构
 
 - 如变更表结构需要删除数据表与版本控制表再执行2，3的动作
+- 已有迁移脚本只需执行3动作即可生成表结构
 
 #### 编辑.gitignore文件可忽略提交到github上的文件
 
 #### 浏览器测试api的get方法
 
 - eg：http://127.0.0.1:5000/query?user_phone=123&pwd=12
+
+#### Win10安装curl
+
+- 进入curl官网并下载相比配的curl压缩包，加压后找到curl.exe的路径，并将此路径添加进
+path用户级别的（也可添加为系统级别）环境变量中，重新打开Dos界面即可运行curl命令。
+
+- 启动项目后可通过curl post提交数据
+
+`eg:curl -d "user_phone=123&pwd=123" 127.0.0.1:5000/add`
+
+(此处注意每次添加需要修改代码中id的值，因为id是主键)
+
+- curl put提交数据
+
+`curl -d "user_phone=123&pwd=123" 127.0.0.1:5000/update -X PUT`
+
+- curl delete提交数据
+
+`curl -d "user_phone=123" 127.0.0.1:5000/delete -X DELETE`
