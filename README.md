@@ -55,7 +55,7 @@ path用户级别的（也可添加为系统级别）环境变量中，重新打�
 
 - 启动项目后可通过curl post提交数据
 
-`eg:curl -d "user_phone=123&pwd=123" 127.0.0.1:5000/add`
+`eg:curl -d "user_phone=123&pwd=123" 127.0.0.1:5000/add -X POST`
 
 (此处注意每次添加需要修改代码中id的值，因为id是主键)
 

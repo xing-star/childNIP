@@ -36,7 +36,7 @@ class Add(MethodView):
         self.pwd = request.form.get('pwd')
 
     def post(self):
-        user = User(id='5555', password=self.pwd, phone=self.phone, name='0', card='0', role='0')
+        user = User(id='555', password=self.pwd, phone=self.phone, name='0', card='0', role='0')
         db.session.add(user)
         db.session.commit()
         # 此处如返回汉字，curl终端会乱码，此处不做处理。
